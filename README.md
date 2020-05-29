@@ -8,7 +8,7 @@ nest new project-name
 
 The `with-middleware` branch has a new middleware added, generated with the command
 ```
-nest mi cool-middleware
+nest g mi cool
 ```
 
 _Note: to install the NestJS cli:_
