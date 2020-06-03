@@ -1,7 +1,13 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
+import { TokenStorageService } from './token-storage/token-storage.service';
 
 @Injectable()
 export class CoolMiddleware implements NestMiddleware {
+
+  constructor(tokenStorageService: TokenStorageService) {
+    tokenStorageService.foo()
+  }
+  
   use(req: any, res: any, next: () => void) {
 
     // const headers = req.headers.Authorization
